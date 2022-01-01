@@ -75,10 +75,10 @@ services:
         subtitle: "Reverse Proxy Manager"
         tag: ""
         url: ""
-  - name: Tools
+  - name: "Tools"
     icon: "fas fa-tools"
     items: 
-      - name: Code-Server
+      - name: "Code-Server"
         logo: ""
         subtitle: "Remote VS Code Editor"
         tag: "8443"
@@ -94,7 +94,7 @@ services:
         tag: "9091"
         url: "http://192.168.0.15:9091"
   - name: "media"
-    icon: "fas fa-media"
+    icon: "fas fa-film"
     items:
       - name: "Jellyfin"
         logo: ""
