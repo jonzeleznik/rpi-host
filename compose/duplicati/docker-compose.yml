@@ -1,0 +1,19 @@
+---
+version: "2.1"
+services:
+  duplicati:
+    image: lscr.io/linuxserver/duplicati
+    container_name: duplicati
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - /portainer/Files/AppData/Config/library/Duplicati/config>:/config
+      - /backups:/backups
+      - /portainer/Files/AppData/Config/library:/source/portainer
+      - /media/usb:/source/media
+    ports:
+      - 8200:8200
+    restart: unless-stopped
+
