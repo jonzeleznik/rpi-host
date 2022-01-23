@@ -2,8 +2,8 @@ version: "3.8"
 services:
   wg-easy:
     environment:
-      - WG_HOST=192.168.0.15
-      - PASSWORD=Franci78
+      - WG_HOST=ip_address
+      - PASSWORD=password
       
     image: weejewel/wg-easy
     container_name: wg-easy
