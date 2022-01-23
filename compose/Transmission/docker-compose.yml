@@ -9,11 +9,11 @@ services:
       - PGID=1000
       - TZ=Europe/London
       - TRANSMISSION_WEB_HOME=/combustion-release/
-      - USER=admin
-      - PASS=Franci78
+      - USER=admin #optional
+      - PASS=admin #optional
     volumes:
       - /portainer/Files/AppData/Config/library/Transmission/config:/config
-      - /media/usb/downloads:/downloads
+      - /path/to/downloads:/downloads
       - /portainer/Files/AppData/Config/library/Transmission/watch:/watch
     ports:
       - 9091:9091
