@@ -41,7 +41,7 @@ sudo docker-compose up -d
   + **Image** - lscr.io/linuxserver/syncthing
 + [Wireguard-easy](./compose/Wireguard-easy/)
   + **Image** - weejewel/wg-easy
-+ [Wireguard-easy](./compose/Wireguard-easy/)
++ [Transmission](./compose/Transmission/)
   + **Image** - lscr.io/linuxserver/transmission
 
 ### [config](./config/)
