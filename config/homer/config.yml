@@ -54,6 +54,11 @@ services:
   - name: "Server"
     icon: "fas fa-cloud"
     items:
+      - name: "OMV"
+        logo: "assets/icons/openmediavault.png"
+        subtitle: "OpenMedaiVault"
+        tag: "9090"
+        url: "http://192.168.0.15:9090/"
       - name: "Portainer"
         logo: "assets/icons/portainer.png"
         subtitle: "Docker Container Manager"
@@ -77,6 +82,11 @@ services:
         subtitle: "Torrent Download Client"
         tag: "9091"
         url: "http://192.168.0.15:9091"
+      - name: "Focalboard"
+        logo: "assets/icons/focalboard.png"
+        subtitle: "Notes"
+        tag: "22300"
+        url: "http://192.168.0.15:22300"
   - name: "media"
     icon: "fas fa-film"
     items:
