@@ -17,7 +17,7 @@ function check_internet() {
 
 check_internet
 
-sudo mkdir /portainer/Files/AppData/Config/library/Nginx || error "Failed to create folder!"
-sudo cp ../config/nginx/config.json /portainer/Files/AppData/Config/library/Nginx/ || error "Failed to copy config.json!"
+sudo mkdir /portainer/Files/AppData/Config/library/Focalboard || error "Failed to create folder!"
+sudo cp ../config/focalboard/config-sqlite.json /portainer/Files/AppData/Config/library/Focalboard/ || error "Failed to copy config.json!"
 
-sudo docker-compose up -d
+sudo docker-compose -f ../compose/Focalboard/docker-compose.yml up -d
