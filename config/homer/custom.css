@@ -81,7 +81,7 @@ body #app .card-content {
 body #app .card,
 body #app .card:hover,
 body #app .message {
-  opacity: 80%;
+  opacity: 78%;
 }
 
  /*Adds more border radius to the cards */
