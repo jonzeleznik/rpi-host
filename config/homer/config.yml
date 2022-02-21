@@ -31,7 +31,7 @@ colors:
     highlight-secondary: "#181C3A"
     highlight-hover: "#1F2347"
     background: "#12152B"
-    card-background: "#181C3A"
+    card-background: "#020204"
     text: "#eaeaea"
     text-header: "#7C71DD"
     text-title: "#fafafa"
@@ -68,11 +68,11 @@ services:
         subtitle: "VPN"
         tag: "51821"
         url: "http://192.168.0.15:51821"
-      - name: "Transmission"
-        logo: "assets/icons/transmission.png"
-        subtitle: "Torrent Download Client"
-        tag: "9091"
-        url: "http://192.168.0.15:9091"
+      - name: "Duplicati"
+        logo: "assets/icons/duplicati.png"
+        subtitle: "Backup manager"
+        tag: "8200"
+        url: "http://192.168.0.15:8200"
       - name: "Focalboard"
         logo: "assets/icons/focalboard.png"
         subtitle: "Notes"
@@ -86,8 +86,8 @@ services:
         subtitle: "Media Center"
         tag: "8096"
         url: "http://192.168.0.15:8096"
-
-
-
-
-
+      - name: "Transmission"
+        logo: "assets/icons/transmission.png"
+        subtitle: "Torrent Download Client"
+        tag: "9099"
+        url: "http://192.168.0.15:9099"
