@@ -9,4 +9,4 @@ services:
     ports:
       - 9091:9091
     environment:
-      - TZ=Europe/Zagreb
+      - TZ=Europe/London
