@@ -11,6 +11,7 @@ services:
       - /portainer/Files/AppData/Config/library/Nginx/config.json:/app/config/production.json
       - /portainer/Files/AppData/Config/library/Nginx/data:/data
       - /portainer/Files/AppData/Config/library/Nginx/letsencrypt:/etc/letsencrypt
+    restart: unless-stopped
   db:
     image: 'yobasystems/alpine-mariadb:10.4.17-arm32v7'
     environment:
@@ -20,3 +21,6 @@ services:
       MYSQL_PASSWORD: 'npm'
     volumes:
       - /portainer/Files/AppData/Config/library/Nginx/data/mysql:/var/lib/mysql
+    restart: unless-stopped
+
+

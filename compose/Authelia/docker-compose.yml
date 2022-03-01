@@ -10,3 +10,4 @@ services:
       - 9091:9091
     environment:
       - TZ=Europe/London
+    restart: unless-stopped
