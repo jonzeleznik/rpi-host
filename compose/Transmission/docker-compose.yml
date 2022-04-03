@@ -16,7 +16,7 @@ services:
       - /media/usb/downloads:/downloads
       - /portainer/Files/AppData/Config/library/Transmission/watch:/watch
     ports:
-      - 9091:9091
+      - 9099:9091
       - 51413:51413
       - 51413:51413/udp
     restart: unless-stopped
