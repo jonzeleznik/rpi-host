@@ -1,28 +1,31 @@
-# rpi-hosted
+<h1 style="text-align: center; font-size: 50px;">rpi-hosted</h1>
+
 ## About
-Repository for hosted docker-compose files, icons for Homer dashboard and install scripts.
+Repository for hosted docker-compose files, icons for Homer dashboard and install scripts.      
+
+![alt text](https://i.imgur.com/ObARmzE.png)
 
 ## Note
 **This was all used on Raspberry pi 4GB self-hosting!**
 
 
 ## Table of content
-- [rpi-hosted](#rpi-hosted)
-  - [About](#about)
-  - [Note](#note)
-  - [Table of content](#table-of-content)
-  - [Containers](#containers)
-    - [**Authelia**](#authelia)
-    - [**Duplicati**](#duplicati)
-    - [**Focalboard**](#focalboard)
-    - [**Homer**](#homer)
-    - [**Jellyfin**](#jellyfin)
-    - [**Nginx Proxy Manager**](#nginx-proxy-manager)
-    - [**Syncthing**](#syncthing)
-    - [**Transmission**](#transmission)
+- [About](#about)
+- [Note](#note)
+- [Table of content](#table-of-content)
+- [Containers](#containers)
+  - [**Authelia**](#authelia)
+  - [**Duplicati**](#duplicati)
+  - [**Focalboard**](#focalboard)
+  - [**Homer**](#homer)
+  - [**Jellyfin**](#jellyfin)
+  - [**Nginx Proxy Manager**](#nginx-proxy-manager)
+  - [**Syncthing**](#syncthing)
+  - [**Transmission**](#transmission)
 
 
 ## Containers
+How to deploy each container.
 
 ### **Authelia**
 Authelia is an open-source server providing a login portal and treating authentication requests in cooperation with NGINX  
