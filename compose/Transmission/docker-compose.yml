@@ -13,10 +13,10 @@ services:
       - PASS=admin
     volumes:
       - /portainer/Files/AppData/Config/library/Transmission/config:/config
-      - /media/usb/downloads:/downloads
+      - /media/usb/downloads:/downloads # <----- change location of downloads folder
       - /portainer/Files/AppData/Config/library/Transmission/watch:/watch
     ports:
-      - 9091:9091
+      - 9099:9091
       - 51413:51413
       - 51413:51413/udp
     restart: unless-stopped

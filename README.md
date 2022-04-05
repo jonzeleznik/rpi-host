@@ -1,58 +1,115 @@
 # rpi-hosted
-
-## Table of content
-- [rpi-hosted](#rpi-hosted)
-  - [Table of content](#table-of-content)
-  - [About](#about)
-  - [Note](#note)
-  - [Repo Content](#repo-content)
-    - [compose](#compose)
-    - [config](#config)
-    - [icons](#icons)
-    - [install scripts](#install-scripts)
-
 ## About
 Repository for hosted docker-compose files, icons for Homer dashboard and install scripts.
 
 ## Note
-**This was all used for Raspberry pi 4GB self-hosting!**
+**This was all used on Raspberry pi 4GB self-hosting!**
 
-## Repo Content
-### [compose](./compose/)
-Docker-compose files that host  
-You can run them by first changing(`cd`) to wanted director.  
-For example: 
-```bash
-cd Homer/
+
+## Table of content
+- [rpi-hosted](#rpi-hosted)
+  - [About](#about)
+  - [Note](#note)
+  - [Table of content](#table-of-content)
+  - [Containers](#containers)
+    - [**Authelia**](#authelia)
+    - [**Duplicati**](#duplicati)
+    - [**Focalboard**](#focalboard)
+    - [**Homer**](#homer)
+    - [**Jellyfin**](#jellyfin)
+    - [**Nginx Proxy Manager**](#nginx-proxy-manager)
+    - [**Syncthing**](#syncthing)
+    - [**Transmission**](#transmission)
+
+
+## Containers
+
+### **Authelia**
+Authelia is an open-source server providing a login portal and treating authentication requests in cooperation with NGINX  
+PORT = 9091
+
+For setup guide watch DB Tech [video](https://www.youtube.com/watch?v=4UKOh3ssQSU)
+
+### **Duplicati**
+Duplicati is a free backup software to store encrypted backups online.    
+PORT = 8200
+
+1. CD to `compose/Duplicati`
 ```
-Than you can just deploy docker-compose file:
-```bash
+cd compose/Duplicati
+```
+2. Deploy the container
+```
 sudo docker-compose up -d
 ```
-+ [Duplicati](./compose/Duplicati/)
-  + **Image** - lscr.io/linuxserver/duplicati
-+ [Homer](./compose/Homer/)
-  + **Image** - b4bz/homer:latest
-+ [Jellyfin](./compose/Jellyfin/)
-  + **Image** - lscr.io/linuxserver/jellyfin
-+ [Nginx](./compose/Nginx/)
-  + **Image** - jc21/nginx-proxy-manager:latest
-+ [Syncthing](./compose/Syncthing/)
-  + **Image** - lscr.io/linuxserver/syncthing
-+ [Wireguard-easy](./compose/Wireguard-easy/)
-  + **Image** - weejewel/wg-easy
-+ [Transmission](./compose/Transmission/)
-  + **Image** - lscr.io/linuxserver/transmission
+3. Go to `your-ip:8200` and follow the setup guide.
 
-### [config](./config/)
-Configuration files for docker containers
+### **Focalboard**
+Foacalboard is an open-source note taking alternative for Notion.   
+PORT = 22300
 
-### [icons](./icons/)
-Icons that I use for my Homer dashboard
+***This Dockefile was made by [nicoulaj](https://github.com/nicoulaj).***  
+For easier deployment I made a [BASH script](install_scripts/focalboard_setup.sh).
 
-### [install scripts](./install_scripts/)
-Install scripts for helping install certen tools:
-+ **Docker-compose**
-+ **Docker**
-+ **Nginx**
-+ **Portainer**
+### **Homer**
+Homer is a dead simple static HOMepage for your servER to keep your services on hand.
+PORT = 5005
+
+1. CD to `compose/Homer`
+```
+cd compose/Homer
+```
+2. Deploy the container
+```
+sudo docker-compose up -d
+```
+3. Go to `your-ip:5005`
+4. For configuring you must go to `/portainer/Files/AppData/Config/library/Homer/config.yml`
+
+### **Jellyfin**
+Jellyfin is the volunteer-built media solution that puts you in control of your media. Stream to any device from your own server, with no strings attached.   
+PORT = 8096
+
+1. CD to `compose/Jellyfin`
+```
+cd compose/Jellyfin
+```
+2. Deploy the container
+```
+sudo docker-compose up -d
+```
+3. Go to `your-ip:8096` and follow the setup guide.
+
+### **Nginx Proxy Manager**
+NGINX proxy manager is a reverse proxy management system, that is based on NGINX with a nice and clean web UI.  
+PORT=81   
+For easier deployment I made a [BASH script](install_scripts/nginx_setup.sh).
+
+### **Syncthing**
+Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes.    
+PORT = 8384     
+
+1. CD to `compose/Syncthing`
+```
+cd compose/Syncthing
+```
+2. Deploy the container
+```
+sudo docker-compose up -d
+```
+3. Go to `your-ip:8384` and follow setup guide.
+
+### **Transmission**
+Transmission is an open source BitTorrent client.     
+PORT = 9099     
+
+1. CD to `compose/Transmission`
+```
+cd compose/Transmission
+```
+2. Configure location of the `\Downloads` folder (where all files will be downloaded) in [compose file](compose/Transmission/docker-compose.yml)
+2. Deploy the container
+```
+sudo docker-compose up -d
+```
+3. Go to `your-ip:9099` 
