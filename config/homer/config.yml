@@ -4,7 +4,7 @@ subtitle: "Walkx"
 logo: "logo.png"
 
 header: false
-footer: false 
+footer: true 
 
 stylesheet:
   - "assets/custom.css"
@@ -13,19 +13,19 @@ columns: "3" # You can change this to any number that is a factor of 12: (1, 2, 
 theme: default
 colors:
   light:
-    highlight-primary: "#fff5f2"
-    highlight-secondary: "#fff5f2"
-    highlight-hover: "#bebebe"
+    highlight-primary: "#181C3A"
+    highlight-secondary: "#181C3A"
+    highlight-hover: "#1F2347"
     background: "#12152B"
-    card-background: "#fff5f2"
-    text: "#ffffff"
-    text-header: "#fafafa"
-    text-title: "#000000"
-    text-subtitle: "#111111"
+    card-background: "#020204"
+    text: "#eaeaea"
+    text-header: "#7C71DD"
+    text-title: "#fafafa"
+    text-subtitle: "#8B8D9C"
     card-shadow: rgba(0, 0, 0, 0.5)
-    link: "#3273dc"
-    link-hover: "#2e4053"
-    background-image: "../assets/wallpaper-light.jpeg" # Change wallpaper.jpeg to the name of your own custom wallpaper!
+    link: "#c1c1c1"
+    link-hover: "#fafafa"
+    background-image: "../assets/wallpaper.jpeg"
   dark:
     highlight-primary: "#181C3A"
     highlight-secondary: "#181C3A"
@@ -41,13 +41,18 @@ colors:
     link-hover: "#fafafa"
     background-image: "../assets/wallpaper.jpeg"
 
+links:
+  - name: "Edit"
+    icon: "fas fa-pen"
+    url: "http://192.168.0.15:8443/"
+
 services:
   - name: "//Server"
     icon: "fas fa-cloud"
     items:
       - name: "OMV"
         logo: "assets/icons/openmediavault.png"
-        subtitle: "OpenMedaiVault"
+        subtitle: "OpenMediaVault"
         tag: "9090"
         url: "http://192.168.0.15:9090/"
       - name: "Portainer"
@@ -60,6 +65,11 @@ services:
         subtitle: "Reverse Proxy Manager"
         tag: "81"
         url: "http://192.168.0.15:81/"
+      - name: "Duplicati"
+        logo: "assets/icons/duplicati.png"
+        subtitle: "Backup manager"
+        tag: "8200"
+        url: "http://192.168.0.15:8200"
   - name: "//Tools"
     icon: "fas fa-tools"
     items: 
@@ -68,9 +78,9 @@ services:
         subtitle: "VPN"
         tag: "51821"
         url: "http://192.168.0.15:51821"
-      - name: "Duplicati"
-        logo: "assets/icons/duplicati.png"
-        subtitle: "Backup manager"
+      - name: "Vaultwarden"
+        logo: "assets/icons/bitwarden.png"
+        subtitle: "Password manager"
         tag: "8200"
         url: "http://192.168.0.15:8200"
       - name: "Focalboard"
@@ -78,6 +88,11 @@ services:
         subtitle: "Notes"
         tag: "22300"
         url: "http://192.168.0.15:22300"
+      - name: "VSCode"
+        logo: "assets/icons/code.png"
+        subtitle: "Code server"
+        tag: "8443"
+        url: "http://192.168.0.15:8443"
   - name: "//media"
     icon: "fas fa-film"
     items:
