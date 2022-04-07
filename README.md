@@ -15,6 +15,7 @@ Repository for hosted docker-compose files, icons for Homer dashboard and instal
 - [Table of content](#table-of-content)
 - [Containers](#containers)
   - [**Authelia**](#authelia)
+  - [**Code-server**](#code-server)
   - [**Duplicati**](#duplicati)
   - [**Focalboard**](#focalboard)
   - [**Homer**](#homer)
@@ -32,6 +33,21 @@ Authelia is an open-source server providing a login portal and treating authenti
 PORT = 9091
 
 For setup guide watch DB Tech [video](https://www.youtube.com/watch?v=4UKOh3ssQSU)
+
+### **Code-server**
+Code-server is VS Code running on a remote server, accessible through the browser.  
+PORT = 8443   
+
+1. CD to `compose/Code-server`
+```
+cd compose/Code-server
+```
+2. Remove `- /portainer/Files/AppData/Config/library/Homer:/config/workspace/homer` if you don't have Homer dashboard.
+3. Deploy the container
+```
+sudo docker-compose up -d
+```
+4. Go to `your-ip:8200`
 
 ### **Duplicati**
 Duplicati is a free backup software to store encrypted backups online.    
