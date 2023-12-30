@@ -1,0 +1,15 @@
+version: "3"
+services:
+  exdiary:
+    image: aceberg/exercisediary
+    restart: unless-stopped
+    ports:
+    - 8851:8851
+    volumes:
+    - ./.dockerdata/ExerciseDiary:/data/ExerciseDiary
+    environment:
+      TZ: CEST    # required, default: ""
+      HOST: "0.0.0.0"         # optional, default: 0.0.0.0
+      PORT: "8851"            # optional, default: 8851
+      THEME: "darkly"          # optional, default: grass
+      COLOR: "dark"          # optional, default: light
