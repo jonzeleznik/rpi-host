@@ -4,10 +4,10 @@ services:
   wg-easy:
     environment:
       # ⚠️ Change the server's hostname (clients will connect to):
-      - WG_HOST=78.153.44.119
+      - WG_HOST=YOUR IP
 
       # ⚠️ Change the Web UI Password:
-      - PASSWORD=Francinabalanci78
+      - PASSWORD=password
 
       # 💡 This is the Pi-Hole Container's IP Address
       - WG_DEFAULT_DNS=10.8.1.3
@@ -35,7 +35,7 @@ services:
     container_name: pihole
     environment:
       # ⚠️ Change the Web UI Password:
-      - WEBPASSWORD=Francinabalanci78
+      - WEBPASSWORD=password
     volumes:
       - '~/.pihole/etc-pihole:/etc/pihole'
       - './.pihole/etc-dnsmasq.d:/etc/dnsmasq.d'
