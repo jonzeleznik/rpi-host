@@ -8,12 +8,11 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - PASSWORD=password #optional
-      - SUDO_PASSWORD=password #optional
-      - DEFAULT_WORKSPACE=/config/workspace #optional
+      - PASSWORD=${PASSWORD}
+      - SUDO_PASSWORD=${SUDO_PASSWORD}
+      - DEFAULT_WORKSPACE=/config/workspace
     volumes:
-      - /portainer/Files/AppData/Config/library/Homer:/config/workspace/homer
-      - /portainer/Files/AppData/Config/library/CodeServer:/config
+      - ./config:/config
     ports:
       - 8443:8443
     restart: unless-stopped

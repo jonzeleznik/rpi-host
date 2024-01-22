@@ -5,12 +5,12 @@ services:
     container_name: pocketbase
     restart: unless-stopped
     command:
-      - --encryptionEnv #optional
-      - ENCRYPTION #optional
+      - --encryptionEnv
+      - ENCRYPTION
     environment:
-      ENCRYPTION: example #optional
+      ENCRYPTION: example
     ports:
       - "8090:8090"
     volumes:
       - ./data/:/pb_data
-      - ./public/:/pb_public #optional
+      - ./public/:/pb_public

@@ -8,9 +8,9 @@ services:
       - '81:81'
       - '443:443'
     volumes:
-      - /portainer/Files/AppData/Config/library/Nginx/config.json:/app/config/production.json
-      - /portainer/Files/AppData/Config/library/Nginx/data:/data
-      - /portainer/Files/AppData/Config/library/Nginx/letsencrypt:/etc/letsencrypt
+      - ./config.json:/app/config/production.json
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
     restart: unless-stopped
   db:
     image: 'yobasystems/alpine-mariadb:10.4.17-arm32v7'

@@ -12,7 +12,7 @@ services:
       - VIRTUAL_HOST=focalboard.local
       - VIRTUAL_PORT=22300
     volumes:
-      - "/portainer/Files/AppData/Config/library/Focalboard/config-sqlite.json:/opt/focalboard/config.json"
-      - "/portainer/Files/AppData/Config/library/Focalboard/sqlite:/opt/focalboard/data"
-      - "/portainer/Files/AppData/Config/library/Focalboard/files:/opt/focalboard/files"
+      - "./config-sqlite.json:/opt/focalboard/config.json"
+      - "./sqlite:/opt/focalboard/data"
+      - "./files:/opt/focalboard/files"
     restart: unless-stopped

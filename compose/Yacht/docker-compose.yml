@@ -7,7 +7,7 @@ services:
     ports:
       - 8080:8000
     volumes:
-      - yacht:/config
+      - ./config:/config
       - /var/run/docker.sock:/var/run/docker.sock
     image: selfhostedpro/yacht
 

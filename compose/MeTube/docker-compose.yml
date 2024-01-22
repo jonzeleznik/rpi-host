@@ -7,4 +7,4 @@ services:
     ports:
       - "6789:8081"
     volumes:
-      - /export/shared_folder/Music:/downloads
+      - ./data:/downloads # <----- change location of downloads folder

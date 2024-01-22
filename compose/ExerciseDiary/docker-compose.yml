@@ -6,10 +6,10 @@ services:
     ports:
     - 8851:8851
     volumes:
-    - ./.dockerdata/ExerciseDiary:/data/ExerciseDiary
+    - ./data:/data/ExerciseDiary
     environment:
-      TZ: CEST    # required, default: ""
-      HOST: "0.0.0.0"         # optional, default: 0.0.0.0
-      PORT: "8851"            # optional, default: 8851
-      THEME: "darkly"          # optional, default: grass
-      COLOR: "dark"          # optional, default: light
+      TZ: CEST    
+      HOST: "0.0.0.0" 
+      PORT: "8851" 
+      THEME: "darkly" 
+      COLOR: "dark" 

@@ -9,12 +9,12 @@ services:
       - PGID=1000
       - TZ=Europe/London
       - TRANSMISSION_WEB_HOME=/combustion-release/
-      - USER=admin
-      - PASS=admin
+      - USER=${USER}
+      - PASS=${PASSWORD}
     volumes:
-      - /portainer/Files/AppData/Config/library/Transmission/config:/config
-      - /media/usb/downloads:/downloads # <----- change location of downloads folder
-      - /portainer/Files/AppData/Config/library/Transmission/watch:/watch
+      - ./config:/config
+      - ./downloads:/downloads # <----- change location of downloads folder
+      - ./watch:/watch
     ports:
       - 9099:9091
       - 51413:51413

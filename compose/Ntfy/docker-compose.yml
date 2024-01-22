@@ -13,7 +13,7 @@ services:
       NTFY_ENABLE_LOGIN: true
       NTFY_UPSTREAM_BASE_URL: https://ntfy.sh
     volumes:
-      - ./:/var/lib/ntfy
+      - ./data:/var/lib/ntfy
     ports:
       - 8765:80
     command: serve

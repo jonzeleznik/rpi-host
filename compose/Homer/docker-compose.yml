@@ -7,7 +7,7 @@ services:
     ports:
       - 5005:8080
     volumes:
-      - /portainer/Files/AppData/Config/library/Homer/:/www/assets
+      - ./data:/www/assets
     environment:
       - UID=1000
       - GID=1000

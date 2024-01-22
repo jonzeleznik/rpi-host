@@ -9,10 +9,8 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - /portainer/Files/AppData/Config/library/Duplicati/config>:/config
-      - /backups:/backups
-      - /portainer/Files/AppData/Config/library:/source/portainer
-      - /media/usb:/source/media
+      - ./config:/config
+      - ./backups:/backups # <----- change location of downloads folder
     ports:
       - 8200:8200
     restart: unless-stopped

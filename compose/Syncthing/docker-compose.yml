@@ -9,9 +9,9 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - /portainer/Files/AppData/Config/library/Syncthing/config:/config
-      - /portainer/Files/AppData/Config/library/Syncthing/data1:/data1
-      - /portainer/Files/AppData/Config/library/Syncthing/data2:/data2
+      - ./config:/config
+      - ./data1:/data1 # <----- change location of downloads folder
+      - ./data2:/data2 # <----- change location of downloads folder
     ports:
       - 8384:8384
       - 22000:22000/tcp

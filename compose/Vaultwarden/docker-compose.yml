@@ -9,6 +9,6 @@ services:
       - 3012:3012
       - 3013:80
     environment:
-      - WEBSOCKET_ENABLED=true  # Enable WebSocket notifications.
+      - WEBSOCKET_ENABLED=true
     volumes:
-      - /portainer/Files/AppData/Config/library/Vaultwarden/data:/data
+      - ./data:/data
