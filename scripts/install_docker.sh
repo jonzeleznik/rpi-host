@@ -17,6 +17,7 @@ function check_internet() {
 
 check_internet
 
-sudo docker pull portainer/portainer-ce:latest || error "Failed to pull latest Portainer docker image!"
-sudo docker run -d -p 9000:9000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest || error "Failed to run Portainer docker image!"
+curl -sSL https://get.docker.com | sh || error "Failed to install Docker."
+sudo usermod -aG docker $USER || error "Failed to add user to the Docker usergroup."
+echo "Remember to logoff/reboot for the changes to take effect."
 
