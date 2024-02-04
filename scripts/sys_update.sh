@@ -1,5 +1,8 @@
 #!/bin/bash
-source /home/pi/rpi-host/scripts/.env
+
+data_folder="/home/pi/rpi-host/scripts/"
+
+source $data_folder.env
 
 error=false
 error_msgs=()
@@ -14,16 +17,22 @@ else
 fi
 
 # --- check for ip change ---
+if ! test -f $data_folder.ip; then
+  touch $data_folder.ip
+  echo $current_ip > $data_folder.ip
+fi
+
 current_ip=$(curl ipinfo.io/ip)
-prev_ip=$(cat /home/pi/rpi-host/scripts/.ip)
+prev_ip=$(cat $data_folder.ip)
 
 if [[ "$current_ip" != "$prev_ip" ]]
 then
-	echo $current_ip > /home/pi/rpi-host/scripts/.ip
-    error=true
-    error_msgs+=("Your public IP has changed!")
+	echo $current_ip > $data_folder.ip
+  error=true
+  error_msgs+=("Your public IP has changed!")
 fi
 
+# --- check docker container status ---
 containers=$(docker ps -a --format "{{.ID}}")
 
 sep='-'
@@ -33,7 +42,6 @@ if [ -z "$containers" ]
 then
   echo "No Docker containers found."
 else
-  # Loop through each container and store its name and status in the array
   for container_id in $containers
   do
     container_status=$(docker inspect -f '{{.State.Status}}' "$container_id")
@@ -64,4 +72,4 @@ else
     curl -u "$NTFY_USER":"$NTFY_PASSWORD" -H "Tags: heavy_check_mark" -H "At: 7am" -H "Title: Successful" -d "Sys updated
     Docker Containers
     $docker" https://rem.cargoesbrrr.com/alerts
-fi
+fi  
