@@ -40,7 +40,7 @@ declare -a container_info=()
 
 if [ -z "$containers" ]
 then
-  echo "No Docker containers found."
+  container_info+=("All containers running!")
 else
   for container_id in $containers
   do
