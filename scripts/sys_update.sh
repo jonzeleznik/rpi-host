@@ -65,11 +65,11 @@ done
 if $error 
 then
     msg=$(printf "|%s|" "${error_msgs[@]}")
-    curl -u "$NTFY_USER":"$NTFY_PASSWORD" -H "Tags: x" -H "Title: Error" -d "$msg
-    Docker Containers
-    $docker" https://rem.cargoesbrrr.com/alerts
+    curl -u "$NTFY_USER":"$NTFY_PASSWORD" -H "At: 6am" -H "Tags: x" -H "Title: Error" -d "$msg
+Docker Containers
+$docker" https://rem.cargoesbrrr.com/alerts
 else
-    curl -u "$NTFY_USER":"$NTFY_PASSWORD" -H "Tags: heavy_check_mark" -H "Title: Successful" -d "Sys updated
-    Docker Containers
-    $docker" https://rem.cargoesbrrr.com/alerts
+    curl -u "$NTFY_USER":"$NTFY_PASSWORD" -H "At: 6am" -H "Tags: heavy_check_mark" -H "Title: Successful" -d "Sys updated
+Docker Containers
+$docker" https://rem.cargoesbrrr.com/alerts
 fi  
