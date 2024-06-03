@@ -1,6 +1,6 @@
 #!/bin/bash
 
-data_folder="/home/pi/rpi-host/scripts/"
+data_folder="/home/ubuntu-srv/rpi-host/scripts/"
 
 source $data_folder.env
 
@@ -8,7 +8,7 @@ error=false
 error_msgs=()
 
 # --- update system ---
-if sudo apt update && sudo apt upgrade -y 
+if apt update && sudo apt upgrade -y 
 then
     error_msgs+=("")
 else
